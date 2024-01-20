@@ -1,0 +1,141 @@
+{
+  "id": "dark-matter-compendium",
+  "title": "Dark Matter: Core",
+  "description": "An [unofficial fan] compilaton of the Dark Matter Core Rulebook by Mage Hand Press.",
+  "authors": [
+    {
+      "name": "CSMcFarland",
+      "discord": "CSMcFarland#6471",
+      "url": "https://gitlab.com/csmcfarland",
+      "flags": {}
+    },
+    {
+      "name": "Android8675",
+      "discord": "Android8675#9424",
+      "email": "66xakfaar@relay.firefox.com",
+      "url": "https://gitlab.com/Android8675",
+      "flags": {}
+    }
+  ],
+  "version": "1.0.2",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.291",
+    "maximum": "11"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "requires": [
+      {
+        "id": "dark-matter-extensions",
+        "type": "module",
+        "manifest": "https://gitlab.com/dark-matter1/dme/raw/master/module.json",
+        "compatibility": {}
+      },
+      {
+        "id": "jal",
+        "type": "module"
+      }
+    ]
+  },
+  "url": "https://gitlab.com/dark-matter1/dark-matter-compendium",
+  "manifest": "https://gitlab.com/dark-matter1/dark-matter-compendium/raw/master/module.json",
+  "download": "https://gitlab.com/dark-matter1/dark-matter-compendium/-/archive/master/dark-matter-compendium-master.zip",
+  "readme": "README.md",
+  "packs": [
+    {
+      "name": "monsters",
+      "label": "Dark Matter Monsters",
+      "path": "packs/monsters.db",
+      "private": true,
+      "type": "Actor",
+      "flags": {}
+    },
+    {
+      "name": "other",
+      "label": "Dark Matter Feats",
+      "path": "packs/o-feats.db",
+      "private": false,
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "backgrounds",
+      "label": "Dark Matter Backgrounds",
+      "path": "packs/backgrounds.db",
+      "private": false,
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "classes",
+      "label": "Dark Matter Classes",
+      "path": "packs/classes.db",
+      "private": false,
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "equipment",
+      "label": "Dark Matter Equipment",
+      "path": "packs/equipment.db",
+      "private": false,
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "races",
+      "label": "Dark Matter Races",
+      "path": "packs/races.db",
+      "private": false,
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "spells",
+      "label": "Dark Matter Spells",
+      "path": "packs/spells.db",
+      "private": false,
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "name": "journals",
+      "label": "Dark Matter Rules",
+      "path": "packs/rules.db",
+      "private": true,
+      "type": "JournalEntry",
+      "flags": {}
+    },
+    {
+      "name": "playlists",
+      "label": "Dark Matter Playlists",
+      "path": "packs/playlists.db",
+      "private": true,
+      "type": "Playlist",
+      "flags": {}
+    },
+    {
+      "name": "rolltables",
+      "label": "Dark Matter Roll Tables",
+      "path": "packs/rolltables.db",
+      "private": false,
+      "type": "RollTable",
+      "flags": {}
+    },
+    {
+      "name": "scenes",
+      "label": "Dark Matter Scenes",
+      "path": "packs/scenes.db",
+      "private": true,
+      "type": "Scene",
+      "flags": {}
+    }
+  ]
+}

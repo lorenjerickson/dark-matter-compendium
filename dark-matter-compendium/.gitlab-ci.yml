@@ -1,0 +1,48 @@
+image: alpine:latest
+
+stages:
+  - lint
+  - package
+  - release
+
+variables:
+  MANIFEST: "module.json"
+  ZIPFILE: "${CI_PROJECT_NAME}.zip"
+  PACKAGE_REGISTRY_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/${CI_PROJECT_NAME}/${CI_COMMIT_TAG}"
+  MANIFEST_RELEASE_URL: "${PACKAGE_REGISTRY_URL}/${MANIFEST}"
+  ZIPFILE_RELEASE_URL: "${PACKAGE_REGISTRY_URL}/${ZIPFILE}"
+
+create-packages:
+  stage: package
+  rules:
+    - if: $CI_COMMIT_TAG
+  before_script:
+    - apk update
+    - apk add jq curl zip
+  script:
+    - 'if [ $(jq -r ''.version'' module.json) != $CI_COMMIT_TAG ]; then echo "Version mismatch between tag and manifest!" && exit 1; fi'
+    - 'jq --arg manurl "$MANIFEST_RELEASE_URL" --arg zipurl "$ZIPFILE_RELEASE_URL" ''.manifest=$manurl | .download=$zipurl'' module.json > output.json'
+    - 'mv output.json module.json'
+    - 'zip -r9 "/tmp/${ZIPFILE}" . -x ./.git/\* -x .gitlab-ci.yml'
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file "${MANIFEST}" "${PACKAGE_REGISTRY_URL}/${MANIFEST}"'
+    - 'curl --header "JOB-TOKEN: $CI_JOB_TOKEN" --upload-file "/tmp/${ZIPFILE}" "${PACKAGE_REGISTRY_URL}/${ZIPFILE}"'
+
+create-release:
+  stage: release
+  image: registry.gitlab.com/gitlab-org/release-cli:latest
+  rules:
+    - if: $CI_COMMIT_TAG
+  script:
+    - echo "Release $CI_COMMIT_TAG"
+  release:
+    name: ${CI_COMMIT_TAG}
+    tag_name: ${CI_COMMIT_TAG}
+    description: "Release ${CI_COMMIT_TAG} of ${CI_PROJECT_NAME}."
+    assets:
+      links:
+        - name: ${MANIFEST}
+          url: "$PACKAGE_REGISTRY_URL/$MANIFEST"
+          link_type: other
+        - name: ${ZIPFILE}
+          url: "$PACKAGE_REGISTRY_URL/$ZIPFILE"
+          link_type: package
