@@ -33,7 +33,7 @@
     ],
     "requires": [
       {
-        "id": "dark-matter-extensions",
+        "id": "dme",
         "type": "module"
       },
       {
