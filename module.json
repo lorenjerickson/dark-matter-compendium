@@ -34,8 +34,7 @@
     "requires": [
       {
         "id": "dark-matter-extensions",
-        "type": "module",
-        "manifest": "https://raw.githubusercontent.com/lorenjerickson/dark-matter-compendium/main/module.json"
+        "type": "module"
       },
       {
         "id": "jal",
@@ -43,7 +42,7 @@
       }
     ]
   },
-  "url": "https://gitlab.com/dark-matter1/dark-matter-compendium",
+  "url": "https://github.com/lorenjerickson/dark-matter-compendium",
   "manifest": "https://raw.githubusercontent.com/lorenjerickson/dark-matter-compendium/main/module.json",
   "readme": "README.md",
   "packs": [
