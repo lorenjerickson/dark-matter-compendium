@@ -35,8 +35,7 @@
       {
         "id": "dark-matter-extensions",
         "type": "module",
-        "manifest": "https://gitlab.com/dark-matter1/dme/raw/master/module.json",
-        "compatibility": {}
+        "manifest": "https://raw.githubusercontent.com/lorenjerickson/dark-matter-compendium/main/module.json"
       },
       {
         "id": "jal",
@@ -45,8 +44,7 @@
     ]
   },
   "url": "https://gitlab.com/dark-matter1/dark-matter-compendium",
-  "manifest": "https://gitlab.com/dark-matter1/dark-matter-compendium/raw/master/module.json",
-  "download": "https://gitlab.com/dark-matter1/dark-matter-compendium/-/archive/master/dark-matter-compendium-master.zip",
+  "manifest": "https://raw.githubusercontent.com/lorenjerickson/dark-matter-compendium/main/module.json",
   "readme": "README.md",
   "packs": [
     {

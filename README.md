@@ -15,7 +15,7 @@ An add-on module of the [Dark Matter Core Rulebook](https://darkmatter.magehandp
 ## Dependencies
 This module uses some other extensions to run properly.
 
-* [Dark Matter System Extensions](https://gitlab.com/dark-matter1/dme) adds Dark Matter specific skills, weapon properties and more on top of the [Foundry VTT dnd5e Game System](https://gitlab.com/foundrynet/dnd5e).
+* [Dark Matter System Extensions](https://github.com/lorenjerickson/dark-matter-extensions) adds Dark Matter specific skills, weapon properties and more on top of the [Foundry VTT dnd5e Game System](https://gitlab.com/foundrynet/dnd5e).
 * [Journal Anchor Links](https://foundryvtt.com/packages/jal) lets you link to a header (h1-h6) in a journal page. Makes it easy to have scene notes that open to a place in a journal entry.
 * [Compendium Folders](https://github.com/earlSt1/vtt-compendium-folders) adds subfolders to the Compendiums menu. Makes it easier to search through all the system compendiums, but is NOT required to run.
 
@@ -38,7 +38,7 @@ _(Notice how some of the Character Sheet fields fill in automatically?)_
 
 # Special Thanks
 - To [Mage Hand Press](https://mfov.magehandpress.com/) and the Digits of Vecna over on the [MHP Discord](https://discord.gg/pJEWa6b) for the amazing setting that is the Dark Matter 'Verse. (and for not shutting us down at first wind.)
-- [@CSMcFarland#6471](https://gitlab.com/csmcfarland) for hosting @ gitlab, coding the heck out of the ['Verse](https://gitlab.com/dark-matter1/dme), and teaching Git to those eager to learn, but pretty clueless.
+- [@CSMcFarland#6471](https://gitlab.com/csmcfarland) for hosting @ gitlab, coding the heck out of the ['Verse](https://github/com/lorenjerickson/dark-matter-extensions), and teaching Git to those eager to learn, but pretty clueless.
 - [@Android8675#9424](https://gitlab.com/Android8675) who can't write anything here because it would be weird to talk about himself in the third person, but he's thankful that he's able to contribute so much.
 - [@OwlbearAviary#9251](https://github.com/RabidOwlbear/) for the added html, javascript code foo and all the pretty colors.
 
